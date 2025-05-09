@@ -133,6 +133,9 @@ void updateHeaterState() {
         currentState = IDLE;
         buzzerTriggered = false;
       }
+      else if(currentTemp > TARGET_TEMP - MARGIN_TEMP && currentTemp < OVERHEAT_TEMP) {
+      currentState = STABILIZING;
+      }
       break;
   }
 

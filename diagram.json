@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "ms07",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 19.2, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 82.8, "left": -63.4, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -45,
+      "left": 181.5,
+      "rotate": 90,
+      "attrs": { "temperature": "45.8" }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": 62.4,
+      "left": 197.7,
+      "rotate": 90,
+      "attrs": { "common": "cathode" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer1", "top": -84, "left": 69, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 142.8,
+      "left": 189,
+      "rotate": 90,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "v5", "h0" ] ],
+    [ "dht1:SDA", "esp:15", "blue", [ "h-10", "v0" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "led1:A", "esp:5", "green", [ "v0" ] ],
+    [ "rgb1:COM", "esp:GND.2", "black", [ "h-5", "v0" ] ],
+    [ "rgb1:R", "esp:21", "red", [ "h-25", "v1" ] ],
+    [ "rgb1:G", "esp:22", "green", [ "h-20", "v0" ] ],
+    [ "rgb1:B", "esp:23", "cyan", [ "v-10" ] ],
+    [ "buzzer1:1", "esp:GND.2", "black", [ "v0" ] ],
+    [ "buzzer1:2", "esp:19", "red", [ "v0" ] ],
+    [ "led2:C", "esp:GND.2", "black", [ "h-20", "v0" ] ],
+    [ "led2:A", "esp:18", "red", [ "h-30", "v0" ] ]
+  ],
+  "dependencies": {}
+}

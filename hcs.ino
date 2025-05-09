@@ -104,6 +104,10 @@ void updateHeaterState() {
     case IDLE:
       setRGB(false, true, false);
       if (currentTemp < TARGET_TEMP - MARGIN_TEMP) currentState = HEATING;
+      else if (currentTemp >= TARGET_TEMP - MARGIN_TEMP && currentTemp <= TARGET_TEMP + MARGIN_TEMP) {
+      currentState = STABILIZING;
+      buzzerTriggered = false; 
+      }
       break;
 
     case HEATING:

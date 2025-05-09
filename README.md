@@ -34,13 +34,13 @@ This project simulates a smart heater control system using an ESP32 microcontrol
 
 ## Pin Configuration
 
-DHT22 Data Pin   | GPIO 15 
-Heater LED       | GPIO 5  
-Buzzer           | GPIO 19 
-RGB Red          | GPIO 21 
-RGB Green        | GPIO 22 
-RGB Blue         | GPIO 23 
-Cooling LED      | GPIO 18 
+-DHT22 Data Pin   | GPIO 15 
+-Heater LED       | GPIO 5  
+-Buzzer           | GPIO 19 
+-RGB Red          | GPIO 21 
+-RGB Green        | GPIO 22 
+-RGB Blue         | GPIO 23 
+-Cooling LED      | GPIO 18 
 
 ## Temperature Thresholds
 
@@ -58,11 +58,11 @@ The ESP32 advertises a short payload every 5 seconds containing:
 
 ## States and Visual Indication (RGB LED)
 
-IDLE             | Green           
-HEATING          | Yellow (Red+Green) 
-STABILIZING      | Cyan (Green+Blue)  
-TARGET_REACHED   | Blue            
-OVERHEAT         | Red             
+-IDLE             | Green           
+-HEATING          | Yellow (Red+Green) 
+-STABILIZING      | Cyan (Green+Blue)  
+-TARGET_REACHED   | Blue            
+-OVERHEAT         | Red             
 
 ## Note
 

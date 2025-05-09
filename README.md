@@ -74,3 +74,6 @@ The ESP32 advertises a short payload every 5 seconds containing:
 
 ![image](https://github.com/user-attachments/assets/826675a9-5d96-4aa1-9560-5fea51a6a790)
 
+Wokwi Simulation - 
+https://wokwi.com/projects/430447962847058945
+
